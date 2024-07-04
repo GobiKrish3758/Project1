@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <h1>CALCULATOR</h1><br>
+    <input type="number" placeholder="Enter Number1" id="num1"><br><br>
+    <input type="number" placeholder="Enter Number2" id="num2"><br><br>
+    <button id="one" onclick="Add()">ADD</button>
+    <button id="two" onclick="Sub()">SUB</button><br><br>
+    <button id="three" onclick="Mul()">MUL</button>
+    <button id="four" onclick="Div()">DIV</button>
+    <p>RESULT</p><input id="r"readonly>
+    <h2>Thank you</h2>
+</div>
+</body>
+<style>
+    body{
+        margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('calculator.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }
+   div{
+    background-color:lightskyblue;
+        width: 400px;
+        height: 400px;
+        align-items: center;
+        border: 5px solid black;
+        border-radius: 10%;
+        margin-left: 100px;margin-top: 150px;
+        position: relative;
+    }
+
+    h1,h2{
+        text-align: center;
+    }
+   input{
+    margin-left: 110px;
+   }
+   p{
+    margin-left: 110px;
+   }
+  
+   #two,#four{
+    margin-left: 70px;
+   }
+   #one,#three{
+    margin-left:110px;
+   }
+
+</style>
+<script>
+    function Add(){
+        var a=document.getElementById("num1").value;
+        var b=document.getElementById("num2").value;
+        var c=parseInt(a)+parseInt(b);
+       document.getElementById("r").value=c;
+    }
+       function Sub(){
+        var a=document.getElementById("num1").value;
+        var b=document.getElementById("num2").value;
+        var c=parseInt(a)-parseInt(b);
+        document.getElementById("r").value=c;
+    }
+    function Mul(){
+        var a=document.getElementById("num1").value;
+        var b=document.getElementById("num2").value;
+        var c=parseInt(a)*parseInt(b);
+        document.getElementById("r").value=c;
+    }
+    function Div(){
+        var a=document.getElementById("num1").value;
+        var b=document.getElementById("num2").value;
+        var c=parseInt(a)/parseInt(b);
+        document.getElementById("r").value=c;
+    }
+
+
+</script>
+</html>
